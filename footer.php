@@ -1,0 +1,34 @@
+<!-- Suggestion -->
+<div class="container">
+            <div class="suggestion">
+                <h2 class="">Qual é sua sugestão de conteúdo?</h2>
+                <p>Que conteúdo você gostaria de ver por aqui?</p>
+                <form action="" class="mb-5 form-suggestion">
+                    <div class="form">
+                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Digite seu nome">
+                        <textarea class="form-control mt-2" id="exampleFormControlTextarea1" placeholder="Qual é sua sugestão?" rows="2"></textarea>
+                        <a href="" class="btn btn-posts btn-suggestion mt-3">Enviar</a>
+                    </div>    
+                </form>
+            </div>
+        </div>
+
+
+        <!-- Footer-->
+        <footer class="pt-5 pb-2">
+            <div class="icons text-center mb-4">
+                <a href=""><i class="bi bi-instagram icons-arround"></i></a></i>
+                <a href=""><i class="bi bi-facebook icons-arround"></i></a></i>
+                <a href=""><i class="bi bi-youtube icons-arround"></i></a></i>
+            </div>
+            <div class="container text-center">
+                <p class="m-0 text-footer">Copyright &copy; Code.me 2021. Feito com muito ♥ por <a href="">José Mateus</a> </p>
+                <a href="" class="text-footer">Políticas de privacidade</a>
+            </div>
+        </footer>
+        <script type="text/javascript">
+            var ajaxUrl = "<?php echo admin_url('admin-ajax.php') ?>";
+        </script>
+        <?php wp_footer(); ?>
+    </body>
+</html>
