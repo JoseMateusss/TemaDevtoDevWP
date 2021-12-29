@@ -1,10 +1,29 @@
 //Script do dark-mode
-const $html = document.querySelector('html')
-const $checkbox = document.querySelector('#switch')
+let nome = 'theme';
+let valor = 'dark';
+let local = 'path=/';
+let validade = new Date();
 
-$checkbox.addEventListener('change', function() {
-    $html.classList.toggle('dark-mode')
-})
+validade.setTime(+ validade + (365 * 86400000));
+
+jQuery('#switch').on('change', function(){
+	if(jQuery(this).is(':checked')){
+		jQuery(this).attr('value', 'true');
+		document.cookie = nome + '=' + valor + "; expires=" + validade.toGMTString() + '; '+local;
+		location.reload();
+	} else {
+		jQuery(this).attr('value', 'false');
+		document.cookie = nome + '=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+		location.reload();
+	}
+});
+
+// const $html = document.querySelector('html')
+// const $checkbox = document.querySelector('#switch')
+
+// $checkbox.addEventListener('change', function() {
+//     $html.classList.toggle('dark-mode')
+// })
 
 
 jQuery(function(){

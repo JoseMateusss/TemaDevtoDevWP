@@ -3980,7 +3980,7 @@ textarea.form-control-lg {
   border-color: transparent;
 }
 .nav-tabs .nav-link.active,
-.nav-tabs .nav-item.show .nav-link {
+.nav-tabs .menu-item.show .nav-link {
   color: #495057;
   background-color: #fff;
   border-color: #dee2e6 #dee2e6 #fff;
@@ -4003,20 +4003,20 @@ textarea.form-control-lg {
 }
 
 .nav-fill > .nav-link,
-.nav-fill .nav-item {
+.nav-fill .menu-item {
   flex: 1 1 auto;
   text-align: center;
 }
 
 .nav-justified > .nav-link,
-.nav-justified .nav-item {
+.nav-justified .menu-item {
   flex-basis: 0;
   flex-grow: 1;
   text-align: center;
 }
 
-.nav-fill .nav-item .nav-link,
-.nav-justified .nav-item .nav-link {
+.nav-fill .menu-item .nav-link,
+.nav-justified .menu-item .nav-link {
   width: 100%;
 }
 

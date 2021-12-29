@@ -1,11 +1,12 @@
 <?php get_header(); ?>
 
-<?php if(have_posts()): ?>
-	<?php while(have_posts()): ?>
-    	<?php the_post(); ?>
+
     	 <div class="container">
             <div class="row">
                 <div class="col-lg-8">
+                    <?php if(have_posts()): ?>
+                        <?php while(have_posts()): ?>
+                            <?php the_post(); ?>
                     <!-- Post content-->
                     <article style="margin-top: 50px;">
                         <!-- Post header-->
@@ -28,15 +29,19 @@
                         </section>
                     </article>
                     <!-- Posts related section-->
+                        <?php endwhile; ?>
+                    <?php endif; ?>
                 </div>
 
                 <!-- Side widgets-->
+                <div class="col-lg-4 sidebar-single">
+                    <?php get_sidebar(); ?>
+                </div>
                 
             </div>
         </div>
 
 
-	<?php endwhile; ?>
-<?php endif; ?>
+	
 
 <?php get_footer(); ?>

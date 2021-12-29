@@ -6,7 +6,7 @@
                 <div class="text-center title-header my-5">
                     <h1 class="fw-bolder">Dev to Dev</h1>
                     <p class="lead mb-0">De desenvolvedores para desenvolvedores</p>
-                    
+                     
                     <form action="" class="mt-4 form-main">
                         <div class="input-group form-search mg-search flex-nowrap">
                             <input type="text" class="form-control form-search" placeholder="O que você está procurando?" aria-label="O que você está procurando?" aria-describedby="addon-wrapping">
@@ -22,7 +22,6 @@
             <div class="row">
                 <!-- Blog entries-->
                 <div class="col-lg-8 container-posts">
-                    
                     <!-- Nested row for non-featured blog posts-->
                     <div class="row gx-4 gx-lg-5">
                         <div class="postscontent">
@@ -44,7 +43,10 @@
                 </div>
                 
             <!-- Sidebar categories/tags-->
-            <?php get_sidebar(); ?>
+                <div class="col-lg-4">
+                    <?php get_sidebar(); ?>
+                </div>
+            
             
             </div>
         </div>

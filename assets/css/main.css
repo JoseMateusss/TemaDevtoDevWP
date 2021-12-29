@@ -153,6 +153,7 @@ body{
     font-size: 18px;
     line-height: 32.4px;
     color: var(--color);
+    text-align: justify;
 }
 
 .link-category{
@@ -163,6 +164,10 @@ body{
 
 .categories-single:first-child{
     margin-left: 0;
+}
+
+.sidebar-single{
+    margin-top: 170px;
 }
 
 /* Estilos dos posts da index */

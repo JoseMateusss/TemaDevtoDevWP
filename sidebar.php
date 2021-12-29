@@ -1,4 +1,4 @@
-<div class="col-lg-4">
+
 	<!-- Categories-->
 	<div class="card mb-4">
 		<div class="card-body">
@@ -19,4 +19,4 @@
 	        <?php endforeach;  ?>
 	    </div>
 	</div>   
-</div>                 
+                

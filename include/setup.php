@@ -45,3 +45,33 @@ function mt_widgets()
 	));
 
 }
+
+function clean_custom_menus() {
+	$menu_name = 'primary'; // specify custom menu slug
+	if (($locations = get_nav_menu_locations()) && isset($locations[$menu_name])) {
+		$menu = wp_get_nav_menu_object($locations[$menu_name]);
+		$menu_items = wp_get_nav_menu_items($menu->term_id);
+
+
+		$menu_list = '<div class="collapse navbar-collapse" id="navbarSupportedContent">' ."\n";
+		$menu_list .= "\t\t\t\t". '<ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">' ."\n";
+		foreach ((array) $menu_items as $key => $menu_item) {
+			$current =( $_SERVER['REQUEST_URI'] == parse_url( $menu_item->url, PHP_URL_PATH ) ) ? 'active' : '';
+			$title = $menu_item->title;
+			$url = $menu_item->url;
+			$menu_list .= "\t\t\t\t\t". '<li class="nav-item"><a class="nav-link '. $current .'" href="'. $url .'">'. $title .'</a></li>' ."\n";
+		}
+
+		if( isset($_COOKIE["theme"]) and $_COOKIE["theme"] == "dark"){ 
+			$check = "checked"; 
+		}else{
+			$check = "";
+		}
+		$menu_list .= "\t\t\t\t".'<li class=""><label><input type="checkbox" id="switch"'. $check .'><span class="check"></span></label></li>' ."\n";
+		$menu_list .= "\t\t\t\t". '</ul>' ."\n";
+		$menu_list .= "\t\t\t". '</nav>' ."\n";
+	} else {
+		 $menu_list = '<!-- no list defined -->';
+	}
+	echo $menu_list;
+}

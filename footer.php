@@ -22,7 +22,7 @@
                 <a href=""><i class="bi bi-youtube icons-arround"></i></a></i>
             </div>
             <div class="container text-center">
-                <p class="m-0 text-footer">Copyright &copy; Code.me 2021. Feito com muito ♥ por <a href="">José Mateus</a> </p>
+                <p class="m-0 text-footer">Copyright &copy; Dev to Dev 2022. Feito com muito ♥ por <a href="">José Mateus</a> </p>
                 <a href="" class="text-footer">Políticas de privacidade</a>
             </div>
         </footer>
