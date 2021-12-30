@@ -31,31 +31,48 @@ body{
     font-family: 'Ubuntu', sans-serif;
 }
 
-.navbar-brand{
+.navbar-toggler{
+    padding: 0;
+    margin: 0;
+    border: none;
+    border-radius: ;
+}
+.navbar-light .navbar-nav .nav-link{
+    color: var(--color);
+    font-size: 16px;
+    font-family: 'Ubuntu', sans-serif;
+}
+.navbar-light .navbar-nav .nav-link:hover{
+    color: var(--link);
+}
+
+.navbar-light .navbar-brand {
     font-weight: bold;
     color: var(--color);
 }
+
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(137,144,149, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+.custom-toggler.navbar-toggler {
+  border-color: rgb(255,102,203);
+} 
+
+.navbar-light .navbar-brand:hover {
+    color: var(--link);
+}
+
 
 .navbar-brand:hover{
     color: #012340;
 }
 
-.navbar-nav li a{
-     color: var(--color);
-     font-size: 16px;
-} 
 
-.navbar-nav li a:hover{
-    color: var(--link);
-    
-}
 
-.navbar-nav li a.active{
+.navbar-light .navbar-nav .show > .nav-link, .navbar-light .navbar-nav .nav-link.active {
     color: var(--link);
     text-transform: uppercase;
 }
-
-
 
 .container-index{
     background-color: var(--body-bg);

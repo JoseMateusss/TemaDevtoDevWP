@@ -10,11 +10,14 @@ jQuery('#switch').on('change', function(){
 	if(jQuery(this).is(':checked')){
 		jQuery(this).attr('value', 'true');
 		document.cookie = nome + '=' + valor + "; expires=" + validade.toGMTString() + '; '+local;
-		location.reload();
+		const $html = document.querySelector('html');
+		$html.classList.toggle('dark-mode');
+		
 	} else {
 		jQuery(this).attr('value', 'false');
 		document.cookie = nome + '=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
-		location.reload();
+		const $html = document.querySelector('html');
+		$html.classList.toggle('dark-mode');
 	}
 });
 
