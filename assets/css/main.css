@@ -337,6 +337,92 @@ input, textarea{
     font-weight: bold;
 }
 
+
+/*Form de pesquisa*/
+
+.box{
+    width: 400px;
+    height: 40px;
+    background-color: var(--body-bg);
+    border-radius: 30px;
+    border: 1px solid var(--border-search);
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.box > i{
+    font-size: 20px;
+    color: var(--border-search);
+
+}
+
+.box > input{
+    flex: 1;
+    height: 30px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    background-color: var(--body-bg);
+    color: var(--color);
+}
+
+/* Cor de fundo do autocomplete */
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px var(--body-bg) inset;
+}
+
+/* Cor do texto do autocomplete */
+input:-webkit-autofill {
+    -webkit-text-fill-color: var(--color) !important;
+}
+
+
+/*Página de busca (search.php)*/
+.text-search-query{
+    margin-bottom: 30px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 24px;
+    color: var(--color);
+}
+
+.no-posts{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 18px;
+    color: var(--color);
+}
+
+.no-posts a{
+    text-decoration: none;
+}
+
+
+/*Paginação númerica*/
+.pagination .page-numbers {
+   background: var(--body-bg);
+   color: var(--color);
+   display: block;
+   width: auto;
+   margin: 4px 0 0 0;
+   padding: 10px 13px 9px 13px;
+   text-decoration: none;
+   border: 1px solid var(--border-color);
+}
+
+.pagination .page-numbers:hover {
+   background: var(--link-hover);
+   color: #FFF;
+   text-decoration: none;
+
+}
+
+.pagination .current{
+   background: var(--link-hover);
+   color: #FFF;
+   text-decoration: none;
+}
+
 /* Tablete na horizintal ou monitor menor */
 @media(min-width:992px) and (max-width:1199px){
 

@@ -19,23 +19,40 @@
         <!-- Page content-->
         <div class="container container-index p-md-5">
             <div class="row">
+                <h3 class="text-search-query">Resultados de pesquisa para: <?= get_search_query(); ?></h3>
                 <!-- Blog entries-->
                 <div class="col-lg-8 container-posts">
                     <!-- Nested row for non-featured blog posts-->
                     <div class="row gx-4 gx-lg-5">
+                    <?php if(have_posts()):?>
                         <div class="postscontent">
                          <!-- Loop posts preview-->
-                            <?php if(have_posts()):?>
                                 <?php while(have_posts()):?>
                                   <?php the_post(); ?>
                                   <?php get_template_part('template_parts/post'); ?>
                                 <?php endwhile; ?>
-                            <?php endif; ?>
-                        <!-- End loop posts preview -->
+                        <!-- End loop posts preview -->        
                         </div>
                         <!-- Pager-->
-                        <div class="d-flex justify-content-center mb-5"><a class="btn btn-posts text-uppercase" id="loadMoreButton">Carregar mais posts</a></div>
-                        
+                        <div class="justify-content-center">
+                           <nav aria-label="Pagination" class="pagination">
+                            <hr class="my-0">
+                               
+                                    <?php
+                                    global $wp_query; 
+                                    echo paginate_links(array(
+                                    "current" => max(1, get_query_var('paged')),
+                                    "total" => $wp_query->max_num_pages,
+                                    "prev_text" => '<',
+                                    "next_text" => '>'
+                                )); 
+                                ?>
+                            
+                            </nav> 
+                        </div>
+                            <?php else:?>
+                                <p class="no-posts">Nenhum post foi encontrado referente a sua pesquisa :( </p></br><p class="no-posts">Você pode sugerir esse conteúdo para que possamos adicionar ele em nossa pauta de conteúdos :)</br></br> <a href="">Clique aqui para sugerir!</a></p>
+                            <?php endif; ?>
                     </div>
                    
                    
