@@ -9,7 +9,7 @@
                      <form role="search" method="GET"  action="<?= esc_url(home_url('/'));?>" class="mt-4 form-main search-form">
                            <div class="box"> 
                                 <i class="bi bi-search"></i>
-                                <input type="search" placeholder="O que você está procurando?" name="s" value="<?php the_search_query(); ?>">
+                                <input type="search" class="search-text-center" placeholder="O que você está procurando?" name="s" value="<?php the_search_query(); ?>">
                             </div>
                     </form> 
                      

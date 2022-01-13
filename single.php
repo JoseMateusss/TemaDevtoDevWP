@@ -22,12 +22,21 @@
                             
                         </header>
                         <!-- Preview image figure-->
-                        <figure class="mb-4"><img class="img-fluid rounded" src="<?php echo get_the_post_thumbnail_url($post->id, 'full'); ?>" alt="..." /></figure>
+                        <?php if(has_post_thumbnail( $post->ID ) ): ?>
+                            <figure class="mb-4"><img class="img-fluid rounded" src="<?php echo get_the_post_thumbnail_url($post->id, 'full'); ?>" alt="..." /></figure>
+                        <?php endif; ?>
                         <!-- Post content-->
                         <section class="mb-5 content-single">
                             <?php the_content();?>
                         </section>
                     </article>
+                    <hr>
+                    <!-- Post comment-->
+                    <?php 
+                    if(comments_open()){
+                        comments_template();
+                    } 
+                    ?>
                     <!-- Posts related section-->
                         <?php endwhile; ?>
                     <?php endif; ?>

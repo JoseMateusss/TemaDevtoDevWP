@@ -67,7 +67,7 @@ function clean_custom_menus() {
 		}else{
 			$check = "";
 		}
-		$menu_list .= "\t\t\t\t".'<li class=""><label><input type="checkbox" id="switch"'. $check .'><span class="check"></span></label></li>' ."\n";
+		$menu_list .= "\t\t\t\t".'<li class=""><label><input type="checkbox" class="check-dark-mode" id="switch"'. $check .'><span class="check"></span></label></li>' ."\n";
 		$menu_list .= "\t\t\t\t". '</ul>' ."\n";
 		$menu_list .= "\t\t\t". '</nav>' ."\n";
 	} else {

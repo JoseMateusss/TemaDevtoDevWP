@@ -151,6 +151,67 @@ body{
 }
 /* Single page styles */
 
+.comment{
+    border-bottom: 1px solid var(--border-color);
+}
+
+.comment-reply-title{
+    color: var(--color);
+}
+
+p.comment-notes{
+    color: var(--color);
+}
+
+.comment_area {
+    color: var(--color);
+}
+
+.form-group label{
+    color:var(--color);
+}
+
+.form-group textarea{
+    background-color: var(--body-bg);
+    border-color: var(--border-search);
+}
+
+.form-group textarea:focus{
+    background-color: var(--body-bg);
+    border-color: var(--border-search);
+}
+
+.form-group{
+    margin-top: 10px;
+}
+
+.form-group input{
+    background-color: var(--body-bg);
+    border-color: var(--border-search);
+}
+
+.form-group input:focus{
+    background-color: var(--body-bg);
+    border-color: var(--border-search);
+}
+
+.comment-form-cookies-consent{
+    color: var(--color);
+    margin-top: 10px;
+}
+
+.form-submit input{
+    background-color: #0E509A;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+
+
+
 .title-post{
     font-family: 'Ubuntu', sans-serif;
     font-size: 36px;
@@ -272,7 +333,7 @@ body{
 }
 
 input, textarea{
-    text-align: center;
+    text-align: left;
 }
 
 .btn-suggestion{
@@ -356,6 +417,10 @@ input, textarea{
     font-size: 20px;
     color: var(--border-search);
 
+}
+
+.search-text-center{
+    text-align: center;
 }
 
 .box > input{
@@ -488,7 +553,7 @@ input:-webkit-autofill {
 
 /* Fazendo day night mode */
 
-input[type="checkbox"]{
+input.check-dark-mode{
     -webkit-appearance: none;
     visibility: hidden;
     display: none;
