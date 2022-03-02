@@ -5,7 +5,7 @@
     </a>
     <h4 class="post-meta text-muted fst-italic">
         Postado por
-        <a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>"><?php the_author(); ?></a>
+        <a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>" class="text-capitalize"><?php the_author(); ?></a>
         <?php echo get_the_date();?>
     </h4>
 </div>

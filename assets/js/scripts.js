@@ -28,7 +28,7 @@ jQuery('#switch').on('change', function(){
 //     $html.classList.toggle('dark-mode')
 // })
 
-
+//Carregar mais posts
 jQuery(function(){
 	jQuery('#loadMoreButton').on('click', function(){
 		jQuery(this).hide();
@@ -48,4 +48,29 @@ jQuery(function(){
 			}
 		});
 	});
+});
+
+//Enviar formulário de sugestões via ajax
+jQuery( "#suggestion" ).submit(function( event ) {
+   var name = jQuery('#name').val();
+   var message = jQuery('#message').val();
+  jQuery.ajax({
+    method: 'POST',
+    url: 'https://formsubmit.co/ajax/esmeralda.abl1122@gmail.com',
+    dataType: 'json',
+    accepts: 'application/json',
+    data: {
+        name: name,
+        message: message
+    },
+    success: function(data){
+    	jQuery('#status').addClass("success");
+    	jQuery('#status').text("Sugestão enviada com sucesso!");
+    },
+    error: function(err) {
+    	jQuery('#status').addClass("error");
+    	jQuery('#status').text("Opss... algo de errado não está certo!");
+    } 
+});
+  event.preventDefault();
 });

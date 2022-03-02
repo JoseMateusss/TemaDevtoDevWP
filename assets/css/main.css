@@ -105,6 +105,29 @@ body{
     border-radius: 25px;
 }
 
+//Formulario - Status de envio
+
+#status {
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  padding: 10px;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+#status.success {
+  color: #008000;
+  text-align: center;
+  margin-top: 8px;
+  animation: status 4s ease forwards;
+}
+#status.error {
+  color: #df4759;
+  text-align: center;
+  margin-top: 8px;
+  animation: status 4s ease forwards;
+}
+
 .form-main{
    width: 100%;
 }
@@ -487,6 +510,8 @@ input:-webkit-autofill {
    color: #FFF;
    text-decoration: none;
 }
+
+
 
 /* Tablete na horizintal ou monitor menor */
 @media(min-width:992px) and (max-width:1199px){

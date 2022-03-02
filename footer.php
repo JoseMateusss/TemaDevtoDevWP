@@ -3,11 +3,12 @@
             <div class="suggestion">
                 <h2 class="">Qual é sua sugestão de conteúdo?</h2>
                 <p>Que conteúdo você gostaria de ver por aqui?</p>
-                <form action="" class="mb-5 form-suggestion">
+                <form id="suggestion" method="POST" class="mb-5 form-suggestion">
                     <div class="form">
-                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Digite seu nome">
-                        <textarea class="form-control mt-2" id="exampleFormControlTextarea1" placeholder="Qual é sua sugestão?" rows="2"></textarea>
-                        <a href="" class="btn btn-posts btn-suggestion mt-3">Enviar</a>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Digite seu nome" required>
+                        <textarea class="form-control mt-2" id="message" name="message" placeholder="Qual é sua sugestão?" rows="2" required></textarea>
+                        <button class="btn btn-posts btn-suggestion mt-3">Enviar</button>
+                        <div id="status"></div>
                     </div>    
                 </form>
             </div>
