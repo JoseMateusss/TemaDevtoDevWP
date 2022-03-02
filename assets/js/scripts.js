@@ -31,16 +31,20 @@ jQuery('#switch').on('change', function(){
 //Carregar mais posts
 jQuery(function(){
 	jQuery('#loadMoreButton').on('click', function(){
-		jQuery(this).hide();
+		jQuery(this).prop("disabled",true);
 		var offset = jQuery('.post-preview').length;
 		jQuery.ajax({
 			type:'POST',
 			url:ajaxUrl,
 			data:{action:'LoadMorePosts', offset:offset},
+			beforeSend: function(){
+				jQuery('#loadMoreButton').text("").html('<i class="fa fa-spinner fa-spin"></i>');
+			},
 			success:function(html){
 				jQuery('#loadMoreButton').show();
 				if(html != ''){
 					jQuery('.postscontent').append(html);
+					jQuery('#loadMoreButton').text("").html('Carregar mais posts');
 				} else{
 					jQuery('#loadMoreButton').hide();
 				}
@@ -63,12 +67,20 @@ jQuery( "#suggestion" ).submit(function( event ) {
         name: name,
         message: message
     },
+	beforeSend: function(){
+		jQuery('#buttonFormSend').prop("disabled",true);
+		jQuery('#buttonFormSend').text("").html('<i class="fa fa-spinner fa-spin"></i>');
+	},
     success: function(data){
     	jQuery('#suggestion').trigger("reset");
+		jQuery('#buttonFormSend').prop("disabled",false);
+		jQuery('#buttonFormSend').text("").html('Enviar');
     	jQuery('#status').addClass("success");
     	jQuery('#status').text("Sugestão enviada com sucesso!");
     },
     error: function(err) {
+		jQuery('#buttonFormSend').prop("disabled",false);
+		jQuery('#buttonFormSend').text("").html('Enviar');
     	jQuery('#status').addClass("error");
     	jQuery('#status').text("Opss... algo de errado não está certo!");
     } 

@@ -7,7 +7,7 @@
                     <div class="form">
                         <input type="text" class="form-control" id="name" name="name" placeholder="Digite seu nome" required>
                         <textarea class="form-control mt-2" id="message" name="message" placeholder="Qual é sua sugestão?" rows="2" required></textarea>
-                        <button class="btn btn-posts btn-suggestion mt-3">Enviar</button>
+                        <button class="btn btn-posts btn-suggestion mt-3" id="buttonFormSend">Enviar</button>
                         <div id="status"></div>
                     </div>    
                 </form>
