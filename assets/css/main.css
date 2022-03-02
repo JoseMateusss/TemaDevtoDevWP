@@ -577,6 +577,17 @@ input:-webkit-autofill {
         margin-bottom: 15px;
     }
 
+    .box{
+        width: 300px;
+        font-size: 16px;
+    }
+    .box > i{
+        font-size: 20px;
+    }
+    .box > input{
+        width: 200px;
+    }
+
 
 }
 
