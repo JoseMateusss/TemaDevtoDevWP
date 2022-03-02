@@ -64,6 +64,7 @@ jQuery( "#suggestion" ).submit(function( event ) {
         message: message
     },
     success: function(data){
+    	jQuery('#suggestion').trigger("reset");
     	jQuery('#status').addClass("success");
     	jQuery('#status').text("Sugestão enviada com sucesso!");
     },
